@@ -1,0 +1,43 @@
+<html>
+<!--
+Copyright 2011 Caner BASARAN
+https: //github.com/CanerBasaran
+Licensed under the GNU Affero General Public License, version 3
+See the file https://www.gnu.org/licenses/agpl-3.0.txt
+-->
+	<head>
+		<title>Vivotek Non-ActiveX Camera Viewer</title>
+		<meta charset="UTF-8">
+	</head>
+<!--
+Require changes
+***************
+Your-IP-Address
+Port
+Milisecond
+Username
+Password
+-->   	
+	<script type="text/javascript">
+		
+		<!--
+		
+        function reloadpic()
+        {
+         var timestamp = new Date().getTime();
+         document.images["camimage"].src = "http://Your-IP-Address:Port/cgi-bin/video.jpg?random=" + timestamp;
+         setTimeout("reloadpic();", Milisecond);
+        }
+
+        onload = reloadpic;
+        
+         -->
+	</script>
+	
+	<center>
+		<img src="http://Username:Password@Your-IP-Address:Port/cgi-bin/video.jpg"  id="camimage" name="camimage"  alt="loading..."></img>
+	</center>
+
+
+	<a href="rtsp://Username:Password@Your-IP-Address:554/live.sdp">Video</a>
+</html>
